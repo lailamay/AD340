@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -7,6 +8,10 @@
     android:layout_margin="@dimen/widget_margins"
     card_view:cardElevation="2dp"
     card_view:cardCornerRadius="5dp">
+
+    <include
+        android:id="@+id/toolbar"
+        layout= "@layout/toolbar"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
