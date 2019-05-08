@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.abc.lailachavez.R;
+
 public class RecyclerViewActivity extends AppCompatActivity {
     final static String TAG = "RecyclerView goes: ";
     final static String RESULT  = "My Response: ";
@@ -39,7 +41,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recycler);
+        setContentView(R.layout.activity_recycler);
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager manager = new LinearLayoutManager(this);
@@ -50,7 +52,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(int position) {
                 Log.i(TAG, "Clicked " + movies[position][0]);
-                Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MovieDetailActivity.class);
                 intent.putExtra(RecyclerViewActivity.RESULT, movies[position]);
                 startActivity(intent);
             }

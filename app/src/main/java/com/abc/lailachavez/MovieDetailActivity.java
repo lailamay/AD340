@@ -1,7 +1,6 @@
 package com.abc.lailachavez;
 
 
-import static com.abc.lailachavez.R.id.imageView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +8,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.abc.lailachavez.R;
 import com.squareup.picasso.Picasso;
 
 
 
-public class DetailActivity extends Activity {
+public class MovieDetailActivity extends Activity {
     private static final String TAG = "MovieDetail goes: ";
 
 
