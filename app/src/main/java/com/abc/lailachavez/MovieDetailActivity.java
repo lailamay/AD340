@@ -4,6 +4,7 @@ package com.abc.lailachavez;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -18,11 +19,12 @@ public class MovieDetailActivity extends Activity {
     private static final String TAG = "MovieDetail goes: ";
 
 
-
     @Override
     protected void onCreate(Bundle savedState) {
         super.onCreate(savedState);
         Intent intent = getIntent();
+
+
         String[] movieInfo = intent.getStringArrayExtra(RecyclerViewActivity.RESULT);
         setContentView(R.layout.movie_detail_description);
         TextView title = (TextView)findViewById(R.id.title);
