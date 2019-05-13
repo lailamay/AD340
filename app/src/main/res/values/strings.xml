@@ -14,5 +14,4 @@
     <string name="toast_message3">Logged Out!</string>
     <string name="toast_message4">Signed Up!</string>
     <string name="toast_message5">Updated!</string>
-    <string name="title_activity_about">AboutActivity</string>
 </resources>
