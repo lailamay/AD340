@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abc.lailachavez2">
+    package="com.abc.lailachavez">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,10 +16,10 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName="com.abc.lailachavez2.MainActivity">
+            android:parentActivityName="com.abc.lailachavez.MainActivity">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.abc.lailachavez2.MainActivity" />
+            android:value="com.abc.lailachavez.MainActivity" />
         </activity>
 
         <activity
@@ -32,17 +32,17 @@
         </activity>
 
         <activity android:name=".RecyclerViewActivity"
-            android:parentActivityName="com.abc.lailachavez2.MainActivity">
+            android:parentActivityName="com.abc.lailachavez.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.abc.lailachavez2.MainActivity" />
+                android:value="com.abc.lailachavez.MainActivity" />
         </activity>
 
         <activity android:name=".MovieDetailActivity"
-            android:parentActivityName="com.abc.lailachavez2.RecyclerViewActivity"/>
+            android:parentActivityName="com.abc.lailachavez.RecyclerViewActivity"/>
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.abc.lailachavez2.MainActivity" />
+            android:value="com.abc.lailachavez.MainActivity" />
 
     </application>
 
