@@ -9,7 +9,6 @@ import android.view.View;
 
 import com.abc.lailachavez.R;
 
-
 public class AboutActivity extends AppCompatActivity {
 
     @Override

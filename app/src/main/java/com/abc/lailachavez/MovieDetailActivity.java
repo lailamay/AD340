@@ -19,12 +19,16 @@ public class MovieDetailActivity extends Activity {
     private static final String TAG = "MovieDetail goes: ";
 
 
+
     @Override
     protected void onCreate(Bundle savedState) {
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedState);
         Intent intent = getIntent();
-
-
         String[] movieInfo = intent.getStringArrayExtra(RecyclerViewActivity.RESULT);
         setContentView(R.layout.movie_detail_description);
         TextView title = (TextView)findViewById(R.id.title);
