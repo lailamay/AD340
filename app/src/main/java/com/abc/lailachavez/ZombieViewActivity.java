@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import com.abc.lailachavez.R;
-
-public class RecyclerViewActivity extends AppCompatActivity {
+public class ZombieViewActivity extends AppCompatActivity {
     final static String TAG = "RecyclerView goes: ";
     final static String RESULT  = "My Response: ";
 
@@ -43,14 +42,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
-
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager manager = new LinearLayoutManager(this);
@@ -61,12 +52,30 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(int position) {
                 Log.i(TAG, "Clicked " + movies[position][0]);
-                Intent intent = new Intent(getApplicationContext(), MovieDetailActivity.class);
-                intent.putExtra(RecyclerViewActivity.RESULT, movies[position]);
+                Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+                intent.putExtra(ZombieViewActivity.RESULT, movies[position]);
                 startActivity(intent);
             }
         });
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (item.getItemId()){
+            case R.id.item_info:
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
+        }
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

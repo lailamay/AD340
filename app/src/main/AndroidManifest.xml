@@ -3,6 +3,8 @@
     package="com.abc.lailachavez">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -10,39 +12,58 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"
+        android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/title_activity_about"
-            android:parentActivityName="com.abc.lailachavez.MainActivity">
+        <activity android:name=".AboutActivity"
+            android:label="@string/about_label"
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity=".Track"/>
+
         <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.abc.lailachavez.MainActivity" />
-        </activity>
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBX687ZfJDXLV4zJFBaygXIMoxa0xGNb8U" />
+
+        <activity android:name=".MapActivity"
+            android:parentActivityName=".MainActivity"></activity>
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ZombieViewActivity"
+            android:label="@string/selector_label"
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity=".Track"/>
 
-        <activity android:name=".RecyclerViewActivity"
-            android:parentActivityName="com.abc.lailachavez.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.abc.lailachavez.MainActivity" />
-        </activity>
+        <activity android:name=".DetailActivity"
+            android:label="@string/detail_label"
+            android:parentActivityName=".ZombieViewActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity=".Track"/>
 
-        <activity android:name=".MovieDetailActivity"
-            android:parentActivityName="com.abc.lailachavez.RecyclerViewActivity"/>
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.abc.lailachavez.MainActivity" />
+
+        <activity android:name=".CameraList"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".NoNetworkConnection"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".TeamActivity"
+            android:parentActivityName=".MainActivity"/>
+
 
     </application>
 

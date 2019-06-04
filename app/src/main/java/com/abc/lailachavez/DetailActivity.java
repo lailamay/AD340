@@ -4,32 +4,21 @@ package com.abc.lailachavez;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.abc.lailachavez.R;
 import com.squareup.picasso.Picasso;
 
 
-
-public class MovieDetailActivity extends Activity {
+public class DetailActivity extends Activity {
     private static final String TAG = "MovieDetail goes: ";
 
 
 
     @Override
     protected void onCreate(Bundle savedState) {
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         super.onCreate(savedState);
         Intent intent = getIntent();
-        String[] movieInfo = intent.getStringArrayExtra(RecyclerViewActivity.RESULT);
+        String[] movieInfo = intent.getStringArrayExtra(MovieRecyclerAdapter.RESULT);
         setContentView(R.layout.movie_detail_description);
         TextView title = (TextView)findViewById(R.id.title);
         TextView year = (TextView)findViewById(R.id.year);
@@ -42,21 +31,6 @@ public class MovieDetailActivity extends Activity {
         director.setText(movieInfo[2]);
         description.setText(movieInfo[4]);
 
-
-
-
-        /*
-        image.loadUrl(movieInfo[3]);
-        image.setWebViewClient(new WebViewClient() {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        return false;
-        }
-        });
-        image.getSettings().setLoadWithOverviewMode(true);
-        image.getSettings().setUseWideViewPort(true);*/
-
     }
 
 }
-

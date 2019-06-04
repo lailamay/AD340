@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Context;
 
-import com.abc.lailachavez.R;
 import com.squareup.picasso.Picasso;
 
 public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdapter.ViewHolder> {
@@ -36,17 +35,19 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
     }
 
     public MovieRecyclerAdapter(String[][] movies) {
+
         this.movies = movies;
     }
 
     @Override
     public int getItemCount() {
+
         return movies.length;
     }
 
     @Override
     public MovieRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        CardView cardView = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_recyclerview, parent, false);
+        CardView cardView = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler, parent, false);
         return new ViewHolder(cardView);
     }
 
