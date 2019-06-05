@@ -18,7 +18,7 @@ public class DetailActivity extends Activity {
     protected void onCreate(Bundle savedState) {
         super.onCreate(savedState);
         Intent intent = getIntent();
-        String[] movieInfo = intent.getStringArrayExtra(MovieRecyclerAdapter.RESULT);
+        String[] movieInfo = intent.getStringArrayExtra(ZombieViewActivity.RESULT);
         setContentView(R.layout.movie_detail_description);
         TextView title = (TextView)findViewById(R.id.title);
         TextView year = (TextView)findViewById(R.id.year);
