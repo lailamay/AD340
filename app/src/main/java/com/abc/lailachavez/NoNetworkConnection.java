@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 public class NoNetworkConnection extends AppCompatActivity {
-    private static final String TAG = "No Connection";
+   private static final String TAG = "No Connection";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
