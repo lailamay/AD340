@@ -48,7 +48,7 @@ import java.util.List;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 
-public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap myMap;
     private Location currentLocation;
@@ -209,9 +209,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     }
 
 }
-
-
-
 
 
 
