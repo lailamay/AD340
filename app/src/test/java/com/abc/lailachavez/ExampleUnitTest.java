@@ -1,4 +1,4 @@
-package com.abc.lailachavez2;
+package com.abc.lailachavez;
 
 import org.junit.Test;
 
