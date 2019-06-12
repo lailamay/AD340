@@ -1,4 +1,4 @@
-package com.abc.lailachavez2;
+package com.abc.lailachavez;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
